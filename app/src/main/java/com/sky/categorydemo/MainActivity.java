@@ -16,10 +16,13 @@ import com.sky.categorybrowser.AbsCategoryViewConfiger;
 import com.sky.categorybrowser.CategoryBrowserView;
 import com.sky.categorybrowser.CategoryViewConfiger;
 import com.sky.categorybrowser.adapter.CategorySectionAdapter;
+import com.sky.categorybrowser.model.Category;
 import com.sky.categorybrowser.model.CategorySectionItem;
 import com.sky.categorydemo.repo.Repository;
 import com.sky.categorydemo.repo.model.CategoryBean;
 import com.sky.categorydemo.repo.model.CategoryItem;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,8 +45,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupCategory() {
+        //1. 初始化一个CategoryBrowserView。 Setup the category view
         CategoryBrowserView<CategoryBean.MainCategory, CategoryBean.LevelonesBean, CategoryItem> categoryBrowserView = findViewById(R.id.category_view);
+        //2. 加载数据，转换成所需类型。 Load and convert your data to the structure required
         CategoryBean category = Repository.getSampleCategory();
+        List<Category<CategoryBean.MainCategory, CategoryBean.LevelonesBean, CategoryItem>> categoryList = DemoCategoryViewConfiger.convertToCategory(category.getMainCategoryList());
+        //3. 定义一个view configer, 设置数据展示及点击逻辑。  Define a view configer to define how to setup the category view  with your data
         CategoryViewConfiger<CategoryBean.MainCategory, CategoryBean.LevelonesBean, CategoryItem> configer = new DemoCategoryViewConfiger(MainActivity.this){
 
             @Override
@@ -62,10 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         };
-        //先设置一个配置器
+        //4. 将view configer设置给初始化一个CategoryBrowserView，要先设置configer。Set the configer and data to the category view. Configer must be set before the data
         categoryBrowserView.setViewConfiger(configer);
-        //再设置上数据即可
-        categoryBrowserView.setCategoryList(DemoCategoryViewConfiger.convertToCategory(category.getMainCategoryList()),0);
+        categoryBrowserView.setCategoryList(categoryList,0);
     }
 
     @Override
