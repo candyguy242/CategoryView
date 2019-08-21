@@ -12,7 +12,7 @@
         android:id="@+id/category_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:mainWidth="120dp"
+        app:mainWidth="100dp"
         />
 
 </android.support.constraint.ConstraintLayout>
