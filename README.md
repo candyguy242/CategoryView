@@ -5,23 +5,24 @@ Android category view, displayed as two list.
 ## 特点 Feature:
 
 1. 可配置性高，条目样式可以通过multi type的方式拓展，分块间距可以通过decoration来设置，感谢 [BRVAH](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)~
-
 2. 滚动时自动同步两列的位置;
-
 3. 反射滚动完全支持,此时前一列表会从最后一项开始显示;
-
 4. 泛型支持，设置时更易获取数据;
-
 5. 使用方便~
 
-   
+---
 
 1. Highly configurable, the item style and section margin can be extended by multi type and decoration, supported by [BRVAH](https://github.com/CymChad/BaseRecyclerViewAdapterHelper),thanks to them~
+
 2. Auto sync position in two list when scrolling;
+
 3. Backward scroll is fully supported, previous list is displayed from the last one;
+
 4. Generic support, easy to get your data when configuring;
+
 5. Very easy to use~
    
+---
 
 示例截图 Demo capture:
 
