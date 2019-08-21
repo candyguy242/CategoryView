@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="@drawable/lib_category_main_item_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.sky.categorydemo.RoundCornerImageView
+        android:id="@+id/category_sub_item_ic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:maxWidth="75dp"
+        android:maxHeight="75dp"
+        app:hwRate="1.0"
+        app:radiusX="6dp"
+        app:radiusY="6dp"
+        android:scaleType="centerCrop"
+        tools:src="#ff0000"/>
+
+    <TextView
+        android:id="@+id/category_sub_item_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/lib_category_item_sub_item_text"
+        android:textSize="14dp"
+        android:ellipsize="end"
+        tools:text="音频"/>
+</LinearLayout>

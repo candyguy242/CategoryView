@@ -1,0 +1,1 @@
+Android category view, displayed as two list.

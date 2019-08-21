@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/category_sub_item_text_title_tv"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@drawable/lib_category_section_item_text_bg"
+    android:gravity="center"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:padding="4dp"
+    android:textColor="@color/lib_category_item_sub_item_text"
+    android:textSize="13dp"
+    tools:text="经典故事" />

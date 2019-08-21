@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation rootProject.ext.appcompat
+        implementation rootProject.ext.design
+        implementation rootProject.ext.constraintlayout
+        implementation rootProject.ext.brvah
+        implementation 'com.google.code.gson:gson:2.8.5'
+        implementation 'com.github.bumptech.glide:glide:4.9.0'
+        implementation project(path: ':categorybrowserlibrary')
+//        testImplementation 'junit:junit:4.12'
+//        androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//        androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    }
+}

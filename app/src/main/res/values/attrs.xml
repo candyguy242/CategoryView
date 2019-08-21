@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="radiusX" format="dimension" />
+        <attr name="radiusY" format="dimension" />
+        <attr name="hwRate" format="float" />
+        <attr name="whRate" format="float" />
+    </declare-styleable>
+</resources>
